@@ -101,13 +101,13 @@ app.get('/help/*', (req, res) => {
     })
 })
 
-app.get('*', (port, res) => {
+app.get('*', (req, res) => {
     res.render('404', {
         title:'404',
         errorMessage:'404 not found',
         name:'Guanxin'
     })
 })
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server is up on port ' + port)
 })
